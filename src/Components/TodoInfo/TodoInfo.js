@@ -2,15 +2,18 @@ import React from 'react';
 import './TodoInfo.css';
 
 const TodoInfo = ({todoState}) => {
-    const completed = todoState.filter(item => item.isCompleted)
-    const uncompleted = todoState.filter(item => !item.isCompleted)
-    console.log('completed: ',completed.length, 'uncompleted',uncompleted.length)
+    const {
+        totalNum,
+        completedNum,
+        unCompletedNum,
+        percentage
+    } = todoState
     return (
         <div className='todo-info'>
-            <div>Total items: {todoState.length}</div>
-            <div>Items completed: {completed.length} </div>
-            <div>Items uncompleted: {uncompleted.length} </div>
-            <div>Completed {Math.floor(completed.length / todoState.length * 100)} % </div>
+            <div>Total items: {totalNum}</div>
+            <div>Items completed: {completedNum} </div>
+            <div>Items uncompleted: {unCompletedNum} </div>
+            <div>Completed {percentage} %</div>
         </div>
     );
 };

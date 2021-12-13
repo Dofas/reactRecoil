@@ -1,10 +1,11 @@
 import React from 'react';
 import {useRecoilValue} from "recoil";
-import {todoListState} from "../../state";
+import {statisticsTodo} from "../../state";
 import TodoInfo from "./TodoInfo";
 
 const TodoInfoContainer = () => {
-    const todoState = useRecoilValue(todoListState)
+    const todoState = useRecoilValue(statisticsTodo)
+    console.log(todoState)
     return (
         <TodoInfo todoState={todoState} />
     );

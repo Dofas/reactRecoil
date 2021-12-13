@@ -16,3 +16,20 @@ export const filteredTodoState = selector({
         }
     }
 })
+
+export const statisticsTodo = selector({
+    key: 'statisticsTodo',
+    get: ({get}) => {
+        const todoList = get(todoListState)
+        const totalNum = todoList.length;
+        const completedNum = todoList.filter(item => item.isCompleted).length;
+        const unCompletedNum = totalNum - completedNum;
+        const percentage = Math.floor(completedNum / totalNum * 100);
+        return {
+            totalNum,
+            completedNum,
+            unCompletedNum,
+            percentage
+        }
+    }
+})

@@ -1,0 +1,16 @@
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-form-text {
+    margin: 10px 0px 10px 0px;
+}
+
+.todo-form-submit {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+}

@@ -1,0 +1,19 @@
+.todo-list-style {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    width: 400px;
+    margin: 10px;
+}
+
+.item-delete {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url('../../assets/images/close-icon.png');
+}

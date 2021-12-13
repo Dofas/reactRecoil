@@ -1,3 +1,21 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0px 15px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-subheader {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
 }
